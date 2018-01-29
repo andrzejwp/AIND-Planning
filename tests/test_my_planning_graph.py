@@ -74,6 +74,11 @@ class TestPlanningGraphMutex(unittest.TestCase):
     def test_interference_mutex(self):
         self.assertTrue(PlanningGraph.interference_mutex(self.pg, self.na4, self.na5),
                         "Precondition from one node opposite of effect of other node should be mutex")
+        print("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%")
+        print(self.na5.action.effect_add)
+        print(self.na5.action.effect_rem)
+        print(self.na4.action.precond_pos)
+        print(self.na4.action.precond_neg)
         self.assertTrue(PlanningGraph.interference_mutex(self.pg, self.na5, self.na4),
                         "Precondition from one node opposite of effect of other node should be mutex")
         self.assertFalse(PlanningGraph.interference_mutex(self.pg, self.na1, self.na2),

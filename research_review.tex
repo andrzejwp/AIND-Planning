@@ -1,0 +1,44 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[a4paper, margin=2cm]{geometry}
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{minted}
+\usepackage[backend=bibtex]{biblatex}
+\setminted{fontsize=\small,baselinestretch=1}
+\bibliography{./bibliography}{}
+\author{Andrzej Wytyczak-Partyka}
+\title{AIND Planning research review}
+\begin{document}
+\maketitle
+
+\section{Introduction}
+Planning has been in the eye of AI community since the very beginning of AI.
+Planning applications have been driving research in AI for years. Below is a brief description
+of 3 important developments in the field of AI planning.
+
+\section{Graphplan}
+The birth of Graphplan algorithm in 1995 \cite{blum1997fast} has moved the research around planning away from
+partial-order planning and allowed the researchers to broaden the area of applications by translating
+various problems to planning problems and using solvers to solve them.
+
+\section{PDDL}
+The development and wide adoption of Planning Domain Definiton Language \cite{mcdermott1998pddl} has enabled researchers
+to benchmark their algorithms more easily. Before PDDL - languages like STRIPS or ADL and their multiple
+extensions and flavors have been used but the multitude of languages made comparing algorithms
+more difficult.
+
+\section{HSP}
+In 1998 the Heuristic Search Planner \cite{bonet1999planning} has shifted the research from backward search
+to forward search (progression planners), which until 1998 seemed unfeasible
+because of large computational effort (e.g. large branching factor). HSP has shown
+how relaxing the original planning problem can help create an admissible heuristic
+which can then be used e.g. for A*.
+
+
+%\begin{thebibliography}
+  %\bibliographystyle{unsrt}
+%\end{thebibliography}
+\printbibliography
+
+\end{document}
